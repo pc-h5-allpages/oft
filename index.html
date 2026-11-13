@@ -35,6 +35,8 @@
 @media(max-width:360px){.event-date{gap:5px}.countdown-wrap{flex-wrap:wrap}.prize-facts b{font-size:28px}.prize-table{font-size:14px}.prize-table td{font-size:16px}.prize-table tbody tr.first td{font-size:18px}.prize-table tr>:first-child{width:41%}.prize-table tfoot td:last-child{font-size:22px}.topbar-inner nav{font-size:14px}}
 
 .rule-list p,.table-note,.steps p,.participate-bottom p,.notice dd,.notice dt,#leaderboard .ranking-disclaimer,#leaderboard .empty-state p{font-size:16px}#leaderboard .wallet-address{font-size:16px}#leaderboard thead th{font-size:16px}
+
+.slot-count{display:block;font:400 14px/1.6 var(--sans);color:var(--muted);margin-top:4px}.prize-table td{white-space:nowrap}.prize-table tr>:first-child{width:34%}.prize-table td{padding-left:8px;padding-right:12px}.table-label{flex-wrap:wrap}.prize-table th:first-child{padding-right:5px}#leaderboard .wallet-pending{font:400 16px/1.7 var(--sans);color:#8093a9}#leaderboard .leaderboard-table-wrap{max-height:640px;overflow:auto}#leaderboard table{min-width:700px}#leaderboard thead{position:sticky;top:0;z-index:1;background:#f3f7fc}#leaderboard .empty-state{min-height:0;padding:16px 24px;align-items:flex-start;text-align:left;border-top:1px solid var(--line);background:#f7faff}#leaderboard .empty-icon{display:none}#leaderboard .empty-state p{max-width:none}#leaderboard .table-scroll-hint{display:block;font-size:14px;color:var(--muted);padding:12px 24px}#leaderboard .board-bottom{flex-wrap:wrap}@media(max-width:760px){.prize-table th,.prize-table td{padding:12px 6px}.prize-table td{font-size:16px}.prize-table tbody tr.first td{font-size:18px}.prize-table tfoot td:last-child{font-size:18px}.prize-table thead th{font-size:14px}.prize-table tr>:first-child{width:35%}.rank{margin-right:4px}.slot-count{font-size:14px}#leaderboard .leaderboard-table-wrap{max-height:560px}#leaderboard .empty-state{padding:14px 16px}#leaderboard .table-scroll-hint{padding:12px 16px}}
 </style>
 
 </head>
@@ -71,26 +73,26 @@
       <div class="panel-body">
         <div class="section-intro"><h3>交易排行榜</h3><a class="small-tag leaderboard-entry" href="#leaderboard">查看榜单 →</a></div>
         <p class="intro-text">活动期间，在 AVE 累计完成 $OFT 交易，交易量排名前 50 名用户瓜分价值 <strong>5,000 USDT</strong> 等值空投奖励。</p>
-        <div class="table-label"><h4>奖励梯度</h4><span>奖励单位：USDT 等值</span></div>
+        <div class="table-label"><h4>奖励梯度</h4><span>奖励单位：U（USDT 等值）</span></div>
         <table class="prize-table"><caption class="sr-only">交易量排名奖励分配，总计50人，5,000 USDT等值空投</caption><thead><tr><th scope="col">排名</th><th scope="col">每人奖励</th><th scope="col">奖金总额</th></tr></thead><tbody>
-          <tr class="first"><th scope="row"><span class="rank rank-one">1</span><span>第 1 名</span></th><td>800</td><td>800</td></tr>
-          <tr><th scope="row"><span class="rank rank-two">2</span><span>第 2 名</span></th><td>500</td><td>500</td></tr>
-          <tr><th scope="row"><span class="rank rank-three">3</span><span>第 3 名</span></th><td>400</td><td>400</td></tr>
-          <tr><th scope="row">第 4–5 名</th><td>250</td><td>500</td></tr>
-          <tr><th scope="row">第 6–10 名</th><td>120</td><td>600</td></tr>
-          <tr><th scope="row">第 11–20 名</th><td>70</td><td>700</td></tr>
-          <tr><th scope="row">第 21–50 名</th><td>50</td><td>1,500</td></tr>
-        </tbody><tfoot><tr><th scope="row">合计 <span>50 个名额</span></th><td>—</td><td>5,000</td></tr></tfoot></table>
-        <p class="table-note">奖励以等值空投形式发放；最终获奖资格以活动结束后的审核结果为准。</p>
+          <tr class="first"><th scope="row"><span class="rank rank-one">1</span><span>第 1 名</span><small class="slot-count">1 个名额</small></th><td>800 U</td><td>800 U</td></tr>
+          <tr><th scope="row"><span class="rank rank-two">2</span><span>第 2 名</span><small class="slot-count">1 个名额</small></th><td>500 U</td><td>500 U</td></tr>
+          <tr><th scope="row"><span class="rank rank-three">3</span><span>第 3 名</span><small class="slot-count">1 个名额</small></th><td>400 U</td><td>400 U</td></tr>
+          <tr><th scope="row">第 4–5 名<small class="slot-count">2 个名额</small></th><td>250 U</td><td>500 U</td></tr>
+          <tr><th scope="row">第 6–10 名<small class="slot-count">5 个名额</small></th><td>120 U</td><td>600 U</td></tr>
+          <tr><th scope="row">第 11–20 名<small class="slot-count">10 个名额</small></th><td>70 U</td><td>700 U</td></tr>
+          <tr><th scope="row">第 21–50 名<small class="slot-count">30 个名额</small></th><td>50 U</td><td>1,500 U</td></tr>
+        </tbody><tfoot><tr><th scope="row">合计 <span>50 个名额</span></th><td>—</td><td>5,000 U</td></tr></tfoot></table>
+        <p class="table-note">U 为 USDT 计价单位，奖励以等值空投形式发放；最终获奖资格以活动结束后的审核结果为准。</p>
       </div>
     </section>
     <section id="leaderboard" class="board" aria-labelledby="board-title">
     <div class="board-heading"><div><h2 id="board-title">交易量排名 <span style="color:#91a3b9;font-size:11px;font-weight:400;margin-left:5px">TOP 50</span></h2><p>仅统计 AVE 上的官方 $OFT 交易</p></div><button type="button" id="refresh-button" class="refresh-button" disabled><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.3 7a7 7 0 0 1 11.4-1L20 9M4 15l2.3 3A7 7 0 0 0 17.7 17"/></svg>刷新榜单</button></div>
     <div class="data-info"><span id="data-status" class="data-status" role="status" aria-live="polite">数据待更新</span><span>数据更新时间：<time id="updated-at">—</time></span></div>
-    <p class="table-scroll-hint">横向滑动查看完整榜单 →</p><div class="leaderboard-table-wrap" tabindex="0" role="region" aria-label="交易榜单表格，可横向滚动"><table aria-label="OFT 交易量前50名榜单"><thead><tr><th scope="col">排名</th><th scope="col">钱包地址</th><th scope="col">累计交易量<small>USDT</small></th><th scope="col">预计奖励<small>USDT 等值</small></th></tr></thead><tbody id="leaderboard-body"></tbody></table></div>
-    <div id="empty-state" class="empty-state"><div class="empty-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 20V12h4v8m2 0V5h4v15m2 0v-5h4v5M3 20h19"/></svg></div><h3 id="empty-title">榜单数据待更新</h3><p id="empty-description">排名数据更新后将在此展示，请稍后查看。</p></div>
-    <div class="board-bottom"><span>已展示 <b id="ranked-count">—</b> 个地址 · 最多显示前 50 名</span><a href="#rewards">查看奖励梯度 <span aria-hidden="true">↗</span></a></div>
-  <p class="ranking-disclaimer">排名及预计奖励仅供参考，最终获奖资格以活动结束后的系统及人工审核结果为准，违规地址名次不顺延。</p><noscript><p class="ranking-disclaimer">请开启 JavaScript 以查看榜单更新。</p></noscript></section>
+    <div id="empty-state" class="empty-state"><div class="empty-icon" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 20V12h4v8m2 0V5h4v15m2 0v-5h4v5M3 20h19"/></svg></div><h3 id="empty-title">榜单数据待更新</h3><p id="empty-description">已列出 50 个奖励名额，实际排名数据待更新。</p></div>
+    <p class="table-scroll-hint">上下滑动查看 50 个名额，横向滑动查看完整榜单</p><div class="leaderboard-table-wrap" tabindex="0" role="region" aria-label="交易榜单表格，可横向滚动"><table aria-label="OFT 交易量前50名榜单"><thead><tr><th scope="col">排名</th><th scope="col">钱包地址</th><th scope="col">累计交易量<small>U（USDT）</small></th><th scope="col">预计奖励<small>U（USDT 等值）</small></th></tr></thead><tbody id="leaderboard-body"><tr class="top-rank"><th scope="row" class="rank-cell">01</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">800 U</td></tr><tr class="top-rank"><th scope="row" class="rank-cell">02</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">500 U</td></tr><tr class="top-rank"><th scope="row" class="rank-cell">03</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">400 U</td></tr><tr><th scope="row" class="rank-cell">04</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">250 U</td></tr><tr><th scope="row" class="rank-cell">05</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">250 U</td></tr><tr><th scope="row" class="rank-cell">06</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">120 U</td></tr><tr><th scope="row" class="rank-cell">07</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">120 U</td></tr><tr><th scope="row" class="rank-cell">08</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">120 U</td></tr><tr><th scope="row" class="rank-cell">09</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">120 U</td></tr><tr><th scope="row" class="rank-cell">10</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">120 U</td></tr><tr><th scope="row" class="rank-cell">11</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">12</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">13</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">14</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">15</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">16</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">17</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">18</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">19</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">20</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">70 U</td></tr><tr><th scope="row" class="rank-cell">21</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">22</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">23</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">24</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">25</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">26</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">27</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">28</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">29</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">30</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">31</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">32</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">33</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">34</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">35</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">36</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">37</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">38</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">39</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">40</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">41</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">42</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">43</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">44</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">45</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">46</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">47</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">48</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">49</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr><tr><th scope="row" class="rank-cell">50</th><td><span class="wallet-pending">待更新</span></td><td class="numeric">—</td><td class="numeric reward-cell">50 U</td></tr></tbody></table></div>
+    <div class="board-bottom"><span>共 50 个奖励名额 · 已上榜 <b id="ranked-count">—</b> 个地址</span><a href="#rewards">查看奖励梯度 <span aria-hidden="true">↗</span></a></div>
+  <p class="ranking-disclaimer">每个名额展示对应排名的预设奖励，U 为 USDT 计价单位；奖励以等值空投形式发放。最终获奖资格以活动结束后的系统及人工审核结果为准，违规地址名次不顺延。</p><noscript><p class="ranking-disclaimer">请开启 JavaScript 以查看榜单更新。</p></noscript></section>
     <section id="participate" class="panel participate" aria-labelledby="participate-title">
       <div class="section-heading"><h2 id="participate-title">参与方式</h2><span class="section-index" aria-hidden="true">02 / PARTICIPATE</span></div>
       <div class="panel-body">
@@ -217,32 +219,34 @@ const LEADERBOARD_API_URL = '';
 
   function renderSnapshot(data) {
     const fragment = document.createDocumentFragment();
-    for (const row of [...data.rows].sort((a, b) => a.rank - b.rank)) {
+    const rowsByRank = new Map(data.rows.map(row => [row.rank, row]));
+    for (let position = 1; position <= 50; position++) {
+      const row = rowsByRank.get(position);
       const tr = document.createElement('tr');
-      if (row.rank <= 3) tr.className = 'top-rank';
+      if (position <= 3) tr.className = 'top-rank';
       const rank = document.createElement('th');
       rank.scope = 'row';
       rank.className = 'rank-cell';
-      rank.textContent = String(row.rank).padStart(2, '0');
+      rank.textContent = String(position).padStart(2, '0');
       const wallet = document.createElement('td');
       const address = document.createElement('code');
-      address.className = 'wallet-address';
-      address.textContent = row.address;
-      address.title = row.address;
+      address.className = row ? 'wallet-address' : 'wallet-pending';
+      address.textContent = row ? row.address : '暂无排名';
+      if (row) address.title = row.address;
       wallet.append(address);
       const volume = document.createElement('td');
       volume.className = 'numeric';
-      volume.textContent = volumeFormat.format(row.volume_usdt);
+      volume.textContent = row ? volumeFormat.format(row.volume_usdt) + ' U' : '—';
       const reward = document.createElement('td');
       reward.className = 'numeric reward-cell';
-      reward.textContent = String(rewardForRank(row.rank));
+      reward.textContent = rewardForRank(position) + ' U';
       tr.append(rank, wallet, volume, reward);
       fragment.append(tr);
     }
     body.replaceChildren(fragment);
     emptyState.hidden = data.rows.length > 0;
     emptyTitle.textContent = '暂无排名';
-    emptyDescription.textContent = '当前暂无符合条件的交易记录，排名更新后将在此展示。';
+    emptyDescription.textContent = '当前暂无符合条件的交易记录，下方展示全部 50 个奖励名额。';
     rankedCount.textContent = String(data.rows.length);
     updatedAt.textContent = dateFormat.format(new Date(data.updated_at)) + '（UTC+8）';
     updatedAt.setAttribute('datetime', data.updated_at);
@@ -294,7 +298,7 @@ const LEADERBOARD_API_URL = '';
     status.dataset.state = 'waiting';
     emptyState.hidden = false;
     emptyTitle.textContent = '榜单数据待更新';
-    emptyDescription.textContent = '排名数据更新后将在此展示。';
+    emptyDescription.textContent = '已列出 50 个奖励名额，实际排名数据待更新。';
   }
 })();
 
