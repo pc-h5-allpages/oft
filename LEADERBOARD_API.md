@@ -8,7 +8,7 @@
 GET https://h5.phaetd4l.com/campaign/v1/ranking/oft_trade_rank
 ```
 
-- 返回前 50 名，钱包地址已打码；无需登录。
+- 钱包地址已打码；无需登录。公示名次由 `data.ranking_limit` 决定（11/14 20:30 前后由 50 改为 200）。
 - 18:00 前返回活动时间和空列表；开始后后端每分钟刷新一次，从 2026-11-14 18:00（UTC+8）整段统计。
 - 跨域已允许 `https://referral-race01.ave.ai`。页面请求不带 Cookie（`credentials: 'omit'`）。
 
@@ -46,7 +46,7 @@ GET https://h5.phaetd4l.com/campaign/v1/ranking/oft_trade_rank
 
 ## 页面行为
 
-- 表格展示第 1–50 名，下方一行说明第 51–200 名每人 20 U、榜单仅公示前 50 名。顶部奖池卡片仍展示全部 200 个奖励席位。
+- 表格行数跟随 `data.ranking_limit`（取它与返回的最大名次中的较大值，上限 200），无需改页面。不足 200 时，表格下方加一行说明剩余名次奖励及“仅公示前 N 名”；等于 200 时不显示该行。
 - 打开页面即请求，此后每 30 秒轮询一次，页面切回前台时立即刷新，也可手动点“刷新榜单”。
 - 页面在后台时跳过自动请求；单次请求 10 秒超时；前一次未完成不重复发送。
 - 请求失败或数据校验不通过时保留上次成功的数据并提示“刷新失败 · 显示上次结果”；返回空列表时显示“活动尚未开始”或“暂无排名”。
@@ -57,4 +57,4 @@ GET https://h5.phaetd4l.com/campaign/v1/ranking/oft_trade_rank
 
 ## 修改接口地址
 
-若后端更换地址，改 `index.html` 榜单脚本顶部的 `LEADERBOARD_API_URL` 即可；若公示名次变化，同步改 `PUBLIC_RANKS`。
+若后端更换地址，改 `index.html` 榜单脚本顶部的 `LEADERBOARD_API_URL` 即可；公示名次变化无需改页面；接口缺 `ranking_limit` 时按 `DEFAULT_PUBLIC_RANKS`（50）处理。
