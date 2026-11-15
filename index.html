@@ -23,7 +23,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:20px}
-body{margin:0;background:var(--bg);color:var(--text);font:18px/1.7 var(--sans);-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 var(--sans);-webkit-text-size-adjust:100%;font-variant-numeric:tabular-nums}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -40,14 +40,14 @@ img{display:block}
 /* Header + hero band */
 .topbar,.band{background-color:var(--ink);color:#fff}
 .topbar{border-bottom:1px solid rgba(255,255,255,.1)}
-.topbar .wrap{display:flex;align-items:center;gap:14px;min-height:72px}
-.brand{display:inline-flex;align-items:center;gap:0;color:var(--ink);font-size:27px;font-weight:750;letter-spacing:-.8px;line-height:1}
+.topbar .wrap{display:flex;align-items:center;gap:12px;min-height:64px}
+.brand{display:inline-flex;align-items:center;gap:0;color:var(--ink);font-size:23px;font-weight:750;letter-spacing:-.8px;line-height:1}
 .brand span{font-weight:500}
-.brand .ave-logo{width:34px;height:30px;object-fit:contain;margin-right:9px}
+.brand .ave-logo{width:30px;height:26px;object-fit:contain;margin-right:9px}
 .topbar .brand,.topbar .partner{color:#fff}
-.cross{color:rgba(255,255,255,.45);font-size:20px}
-.partner{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-size:24px;font-weight:750;letter-spacing:-.3px}
-.oft-logo{width:32px;height:32px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 0 0 1px var(--line)}
+.cross{color:rgba(255,255,255,.45);font-size:17px}
+.partner{display:inline-flex;align-items:center;gap:8px;color:var(--ink);font-size:20px;font-weight:750;letter-spacing:-.3px}
+.oft-logo{width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 0 0 1px var(--line)}
 .topbar .oft-logo{box-shadow:0 0 0 2px rgba(255,255,255,.85)}
 .topnav{display:flex;gap:28px;margin-left:auto;font-size:16px;color:#c9d4e6}
 .topnav a{padding:6px 0;border-bottom:2px solid transparent}
@@ -55,38 +55,38 @@ img{display:block}
 
 .band{position:relative;overflow:hidden;border-bottom:4px solid var(--green)}
 .band:before{content:"";position:absolute;inset:0 0 0 46%;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.09) 1.6px,transparent 1.7px);background-size:22px 22px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
-.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:56px;align-items:center;padding-top:44px;padding-bottom:52px}
-.status-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:26px;font-size:16px}
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:56px;align-items:center;padding-top:40px;padding-bottom:48px}
+.status-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:22px;font-size:15px}
 .chip{display:inline-flex;align-items:center;gap:7px;padding:3px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);color:#dbe3f0;line-height:1.6}
 .chip.status{color:#c3cbff;border-color:rgba(195,203,255,.45)}
 .chip.status:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
 .chip.status[data-phase="live"]{color:#5fe3b5;border-color:rgba(95,227,181,.5);background:rgba(18,184,134,.12)}
 .chip.status[data-phase="ended"]{color:#b8c3d4;border-color:rgba(255,255,255,.22)}
-.lockup{display:flex;align-items:center;gap:16px;margin-bottom:22px}
-.lockup-tile{display:flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:50%;background:#fff}
-.lockup-tile img{width:42px;height:38px;object-fit:contain}
-.lockup-x{font-size:30px;color:rgba(255,255,255,.5);font-weight:300}
-.lockup-oft{width:76px;height:76px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #fff}
+.lockup{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.lockup-tile{display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:#fff}
+.lockup-tile img{width:34px;height:30px;object-fit:contain}
+.lockup-x{font-size:24px;color:rgba(255,255,255,.5);font-weight:300}
+.lockup-oft{width:60px;height:60px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #fff}
 .hero h1{color:#fff;font-weight:800;line-height:1.14;letter-spacing:-1.5px}
-.hero h1 .h1-partners{display:block;font-size:34px;letter-spacing:-.6px;color:#c9d4e6;font-weight:700;margin-bottom:8px}
-.hero h1 .h1-main{display:block;font-size:62px}
-.tagline{margin-top:18px;font-size:40px;line-height:1.25;font-weight:800;color:var(--green);letter-spacing:-.8px}
-.lede{margin-top:14px;font-size:18px;color:#c9d4e6;max-width:30em}
+.hero h1 .h1-partners{display:block;font-size:24px;letter-spacing:-.3px;color:#c9d4e6;font-weight:700;margin-bottom:8px}
+.hero h1 .h1-main{display:block;font-size:52px}
+.tagline{margin-top:14px;font-size:30px;line-height:1.3;font-weight:800;color:var(--green);letter-spacing:-.4px}
+.lede{margin-top:12px;font-size:17px;color:#c9d4e6;max-width:30em}
 .lede strong{color:#fff}
-.when{margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
-.time-label{font-size:16px;color:#aab8cc;display:inline-flex;align-items:center;gap:8px}
+.when{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)}
+.time-label{font-size:15px;color:#aab8cc;display:inline-flex;align-items:center;gap:8px}
 .tz{font-size:14px;color:#dbe3f0;border:1px solid rgba(255,255,255,.25);border-radius:4px;padding:0 6px;line-height:1.7}
-.event-date{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;font-size:19px;font-weight:650;color:#fff}
+.event-date{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;font-size:18px;font-weight:650;color:#fff}
 .event-date .time-label{margin-right:4px}
 .event-date time,.event-date .date-end{white-space:nowrap}
 .event-date .dash{color:rgba(255,255,255,.45);font-weight:400}
 .countdown-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:16px}
 .countdown{display:flex;flex-wrap:wrap;gap:8px}
 .cd{display:inline-flex;align-items:baseline;gap:5px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16)}
-.cd b{min-width:2ch;text-align:center;font-size:34px;line-height:1.15;font-weight:800;color:#fff}
-.cd span{font-size:15px;color:#aab8cc}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 22px;border-radius:6px;font-size:17px;font-weight:650;white-space:nowrap;border:1px solid transparent;transition:background .15s,border-color .15s}
+.cd b{min-width:2ch;text-align:center;font-size:28px;line-height:1.15;font-weight:800;color:#fff}
+.cd span{font-size:14px;color:#aab8cc}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 22px;border-radius:6px;font-size:16px;font-weight:650;white-space:nowrap;border:1px solid transparent;transition:background .15s,border-color .15s}
 .btn-primary{background:var(--ink);color:#fff}
 .btn-primary:hover{background:#0b1b33}
 .btn-secondary{background:var(--paper);color:var(--ink);border-color:#c6d1de}
@@ -101,11 +101,11 @@ img{display:block}
 /* Prize card with 200 seats */
 .pool{background:var(--paper);color:var(--text);border-radius:12px;padding:28px 30px 26px;border-top:5px solid var(--green);box-shadow:0 24px 48px -24px rgba(0,0,0,.55)}
 .pool-label{font-size:16px;color:var(--muted)}
-.pool-value{font-size:76px;line-height:1.05;font-weight:800;color:var(--ink);letter-spacing:-3px;white-space:nowrap}
-.pool-value small{font-size:30px;letter-spacing:0;margin-left:6px;font-weight:700;color:var(--indigo)}
+.pool-value{font-size:64px;line-height:1.05;font-weight:800;color:var(--ink);letter-spacing:-2.5px;white-space:nowrap}
+.pool-value small{font-size:26px;letter-spacing:0;margin-left:6px;font-weight:700;color:var(--indigo)}
 .pool-sub{font-size:16px;color:var(--muted);margin-top:4px}
 .seat-title{display:flex;justify-content:space-between;align-items:baseline;margin-top:22px;padding-top:18px;border-top:1px solid var(--line-soft);font-size:16px;color:var(--text)}
-.seat-title b{color:var(--ink);font-size:18px}
+.seat-title b{color:var(--ink);font-size:17px}
 .seats{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:12px}
 .seats i{display:block;aspect-ratio:1;border-radius:2px;background:var(--tier3)}
 .seats.is-animating i{animation:seat-in .35s ease-out both;animation-delay:calc(var(--i) * 6ms + 100ms)}
@@ -118,7 +118,7 @@ img{display:block}
 .tiers li.t1:before{background:var(--tier1)}
 .tiers li.t2:before{background:var(--tier2)}
 .tiers li span{color:var(--text)}
-.tiers li b{color:var(--ink);font-size:18px;white-space:nowrap}
+.tiers li b{color:var(--ink);font-size:17px;white-space:nowrap}
 .tiers li b small{font-size:15px;font-weight:500;color:var(--muted);margin-left:2px}
 
 .content{padding-top:32px}
@@ -126,14 +126,14 @@ img{display:block}
 /* Sections */
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin-bottom:28px;overflow:hidden}
 .panel-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 20px;padding:24px 28px 18px;border-bottom:1px solid var(--line-soft)}
-.panel-head h2{font-size:26px;line-height:1.35;color:var(--ink);font-weight:750;letter-spacing:-.4px}
+.panel-head h2{font-size:22px;line-height:1.4;color:var(--ink);font-weight:750;letter-spacing:-.3px}
 .panel-head p{font-size:16px;color:var(--muted);margin-top:4px}
 .panel-body{padding:24px 28px 28px}
 .head-link{font-size:16px;color:var(--indigo);font-weight:600;white-space:nowrap}
 .head-link:hover{text-decoration:underline;text-underline-offset:4px}
 
 /* Reward table */
-.prize-table{width:100%;border-collapse:collapse;font-size:18px}
+.prize-table{width:100%;border-collapse:collapse;font-size:17px}
 .prize-table th,.prize-table td{padding:16px 18px;border-bottom:1px solid var(--line-soft);text-align:right;white-space:nowrap}
 .prize-table thead th{font-size:16px;font-weight:500;color:var(--muted);background:var(--soft);padding-top:12px;padding-bottom:12px}
 .prize-table tr>:first-child{text-align:left;white-space:normal}
@@ -143,11 +143,11 @@ img{display:block}
 .t1 .tier-name:before{background:var(--tier1)}
 .t2 .tier-name:before{background:var(--tier2)}
 .slot-count{display:block;font-size:15px;font-weight:400;color:var(--muted);line-height:1.5}
-.prize-table td{color:var(--ink);font-size:20px;font-weight:600}
-.prize-table td .unit{font-size:16px;font-weight:500;color:var(--muted);margin-left:3px}
-.prize-table tbody tr.t1 td:nth-child(2){color:var(--indigo);font-size:24px;font-weight:750}
+.prize-table td{color:var(--ink);font-size:18px;font-weight:600}
+.prize-table td .unit{font-size:15px;font-weight:500;color:var(--muted);margin-left:3px}
+.prize-table tbody tr.t1 td:nth-child(2){color:var(--indigo);font-size:20px;font-weight:750}
 .prize-table tfoot th,.prize-table tfoot td{border-bottom:0;padding-top:18px;font-weight:750;color:var(--ink)}
-.prize-table tfoot td:last-child{font-size:26px;color:var(--ink)}
+.prize-table tfoot td:last-child{font-size:22px;color:var(--ink)}
 .prize-table tfoot th span{display:block;font-size:15px;color:var(--muted);font-weight:400}
 .table-scroll{overflow-x:auto;overscroll-behavior-x:contain}
 .note{margin-top:16px;font-size:16px;color:var(--muted)}
@@ -171,13 +171,13 @@ img{display:block}
 .th-item.t2{border-left-color:var(--tier2)}
 .th-tier{margin:2px 0 0;font-size:16px;color:var(--text)}
 .th-tier span{color:var(--indigo);font-weight:700}
-.th-value{margin:0;font-size:17px;color:var(--ink);font-weight:600;white-space:nowrap}
-.th-value b{font-size:24px;font-weight:750;color:var(--ink);font-variant-numeric:tabular-nums}
-.th-value.is-open b{font-size:22px;color:var(--live)}
+.th-value{margin:0;font-size:16px;color:var(--ink);font-weight:600;white-space:nowrap}
+.th-value b{font-size:21px;font-weight:750;color:var(--ink);font-variant-numeric:tabular-nums}
+.th-value.is-open b{font-size:19px;color:var(--live)}
 .th-hint{margin:6px 0 0;font-size:14px;color:#7c8a9d}
 .th-note{margin:0;padding:10px 28px;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line-soft)}
 .empty-state{padding:16px 28px;border-bottom:1px solid var(--line-soft);background:#fbfcfe}
-.empty-state h3{font-size:18px;color:var(--ink);font-weight:650}
+.empty-state h3{font-size:17px;color:var(--ink);font-weight:650}
 .empty-state p{font-size:16px;color:var(--muted)}
 .board-scroll{max-height:660px;overflow:auto;overscroll-behavior:contain}
 .board-table{width:100%;min-width:640px;border-collapse:collapse;table-layout:fixed}
@@ -212,7 +212,7 @@ img{display:block}
 .steps{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:step}
 .steps li{counter-increment:step;padding:18px 20px;border:1px solid var(--line-soft);border-radius:8px;background:var(--soft)}
 .steps li:before{content:counter(step);display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-size:16px;font-weight:700;margin-bottom:12px}
-.steps h3{font-size:18px;color:var(--ink);font-weight:650}
+.steps h3{font-size:17px;color:var(--ink);font-weight:650}
 .steps p{font-size:16px;color:var(--muted);margin-top:4px}
 .contract{border:1px solid #c9d2f1;background:var(--indigo-soft);border-radius:8px;padding:18px 20px}
 .contract-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 14px;margin-bottom:10px;font-size:16px}
@@ -220,7 +220,7 @@ img{display:block}
 .network{display:inline-flex;align-items:center;gap:7px;color:var(--text)}
 .network:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--indigo)}
 .contract-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}
-.contract-row code{flex:1 1 440px;min-width:0;font:17px/1.7 var(--mono);color:var(--ink);overflow-wrap:anywhere}
+.contract-row code{flex:1 1 440px;min-width:0;font:16px/1.7 var(--mono);color:var(--ink);overflow-wrap:anywhere}
 .copy-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 16px;border-radius:6px;border:1px solid var(--indigo);background:var(--paper);color:var(--indigo);font-size:16px;font-weight:650;flex-shrink:0}
 .copy-button:hover{background:#fff;box-shadow:inset 0 0 0 1px var(--indigo)}
 .participate-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-top:22px}
@@ -230,8 +230,8 @@ img{display:block}
 .rules{display:grid;gap:22px}
 .rules section{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 28px;padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
 .rules section:last-child{border-bottom:0;padding-bottom:0}
-.rules h3{font-size:18px;color:var(--ink);font-weight:650;line-height:1.6}
-.rules p{font-size:17px;line-height:1.85;color:var(--text)}
+.rules h3{font-size:17px;color:var(--ink);font-weight:650;line-height:1.6}
+.rules p{font-size:16px;line-height:1.8;color:var(--text)}
 .rules p+p{margin-top:8px}
 .rules strong{color:var(--ink)}
 
@@ -244,7 +244,7 @@ img{display:block}
 footer{border-top:1px solid var(--line);background:var(--paper)}
 footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;padding-top:22px;padding-bottom:26px}
 .footer-brand{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
-footer .brand{font-size:23px}
+footer .brand{font-size:20px}
 footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
 .footer-event{display:inline-flex;align-items:center;gap:8px;font-size:16px;color:var(--muted)}
 .footer-event .oft-logo{width:26px;height:26px}
@@ -258,18 +258,18 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;gap:32px;padding-top:36px}
   .band:before{inset:0 0 0 30%}
-  .hero h1 .h1-main{font-size:54px}
+  .hero h1 .h1-main{font-size:46px}
   .pool{max-width:560px}
 }
 @media(max-width:760px){
-  body{font-size:17px}
+  body{font-size:16px}
   .wrap{padding:0 16px}
-  .topbar .wrap{min-height:62px;gap:10px}
-  .brand{font-size:24px}
+  .topbar .wrap{min-height:56px;gap:8px}
+  .brand{font-size:20px}
   .brand .ave-logo{margin-right:7px}
-  .brand .ave-logo{width:29px;height:26px}
-  .partner{font-size:20px;gap:6px}
-  .partner .oft-logo{width:28px;height:28px}
+  .brand .ave-logo{width:26px;height:23px}
+  .partner{font-size:17px;gap:6px}
+  .partner .oft-logo{width:24px;height:24px}
   .topnav{gap:0}
   .topnav a{display:none}
   .topnav a.nav-board{display:inline-block;font-weight:650;color:var(--green)}
@@ -277,49 +277,49 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
   .band:before{inset:0;background-size:18px 18px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 60%);mask-image:linear-gradient(180deg,#000,transparent 60%)}
   .status-row{margin-bottom:18px}
   .lockup{gap:12px;margin-bottom:16px}
-  .lockup-tile,.lockup-oft{width:60px;height:60px}
-  .lockup-tile img{width:34px;height:30px}
-  .lockup-x{font-size:24px}
-  .hero h1 .h1-partners{font-size:26px;margin-bottom:4px}
-  .hero h1 .h1-main{font-size:42px;letter-spacing:-1px}
-  .tagline{font-size:31px;margin-top:12px}
-  .lede{font-size:17px}
+  .lockup-tile,.lockup-oft{width:48px;height:48px}
+  .lockup-tile img{width:28px;height:25px}
+  .lockup-x{font-size:20px}
+  .hero h1 .h1-partners{font-size:20px;margin-bottom:4px}
+  .hero h1 .h1-main{font-size:36px;letter-spacing:-.8px}
+  .tagline{font-size:24px;margin-top:10px}
+  .lede{font-size:16px}
   .when{margin-top:20px;padding-top:18px}
-  .event-date{font-size:18px}
+  .event-date{font-size:17px}
   .event-date .time-label{flex-basis:100%}
   .countdown-wrap{gap:8px}
   .countdown{gap:6px;flex-wrap:nowrap}
   .cd{padding:5px 8px;gap:3px}
-  .cd b{font-size:28px}
-  .cd span{font-size:14px}
+  .cd b{font-size:22px}
+  .cd span{font-size:13px}
   .actions{display:none}
   .pool{padding:22px 18px 20px}
-  .pool-value{font-size:58px}
-  .pool-value small{font-size:24px}
+  .pool-value{font-size:48px}
+  .pool-value small{font-size:20px}
   .content{padding-top:24px}
   .seats{gap:2px}
   .panel{margin-bottom:22px}
   .panel-head{padding:18px 16px 14px}
-  .panel-head h2{font-size:23px}
+  .panel-head h2{font-size:20px}
   .panel-body{padding:18px 16px 20px}
   .prize-table{font-size:16px}
   .prize-table th,.prize-table td{padding:14px 8px}
   .prize-table thead th{font-size:15px}
   .tier-name{gap:8px}
   .tier-name:before{width:8px;height:34px}
-  .prize-table td{font-size:18px}
+  .prize-table td{font-size:16px}
   .prize-table td .unit{font-size:15px}
-  .prize-table tbody tr.t1 td:nth-child(2){font-size:20px}
-  .prize-table tfoot td:last-child{font-size:22px}
+  .prize-table tbody tr.t1 td:nth-child(2){font-size:18px}
+  .prize-table tfoot td:last-child{font-size:19px}
   .board-meta{padding:12px 16px}
   .empty-state{padding:14px 16px}
   .thresholds{grid-template-columns:1fr}
   .th-item{padding:12px 16px 12px 12px}
   .th-item+.th-item{box-shadow:inset 0 1px 0 var(--line-soft)}
   .th-tier{font-size:15px}
-  .th-value{font-size:16px}
-  .th-value b{font-size:22px}
-  .th-value.is-open b{font-size:20px}
+  .th-value{font-size:15px}
+  .th-value b{font-size:19px}
+  .th-value.is-open b{font-size:17px}
   .th-hint{font-size:13px}
   .th-note{padding:10px 16px;font-size:13px}
   .scroll-hint{display:block;padding:10px 16px 0;font-size:15px;color:var(--muted)}
@@ -352,7 +352,7 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
   .steps li:before{margin:2px 0 0;grid-row:span 2}
   .steps p{margin-top:0}
   .contract{padding:14px}
-  .contract-row code{flex-basis:100%;font-size:16px}
+  .contract-row code{flex-basis:100%;font-size:15px}
   .copy-button{width:100%}
   .participate-foot .btn{width:100%}
   .rules section{grid-template-columns:1fr;gap:4px}
@@ -365,14 +365,14 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
   .toast{bottom:88px}
 }
 @media(max-width:370px){
-  .hero h1 .h1-main{font-size:37px}
-  .tagline{font-size:28px}
-  .pool-value{font-size:50px}
+  .hero h1 .h1-main{font-size:32px}
+  .tagline{font-size:22px}
+  .pool-value{font-size:42px}
   .cd{padding:4px 6px}
-  .cd b{font-size:24px}
-  .brand{font-size:21px}
-  .partner{font-size:18px}
-  .cross{font-size:16px}
+  .cd b{font-size:20px}
+  .brand{font-size:18px}
+  .partner{font-size:16px}
+  .cross{font-size:14px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
   </style>
