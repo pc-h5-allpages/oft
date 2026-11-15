@@ -164,6 +164,18 @@ img{display:block}
 .refresh-button{display:inline-flex;align-items:center;gap:7px;min-height:44px;padding:6px 16px;border:1px solid #c6d1de;border-radius:6px;background:var(--paper);color:var(--ink);font-size:16px;font-weight:600}
 .refresh-button:hover:not(:disabled){border-color:var(--ink)}
 .refresh-button:disabled{cursor:default;color:#98a5b6;background:var(--soft);border-color:var(--line)}
+.thresholds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--line-soft)}
+.th-item{padding:16px 28px 16px 24px;border-left:4px solid var(--tier3)}
+.th-item+.th-item{box-shadow:inset 1px 0 0 var(--line-soft)}
+.th-item.t1{border-left-color:var(--tier1)}
+.th-item.t2{border-left-color:var(--tier2)}
+.th-tier{margin:0;font-size:16px;color:var(--text);font-weight:600}
+.th-tier span{color:var(--indigo)}
+.th-value{margin:4px 0 0;font-size:16px;color:var(--muted);white-space:nowrap}
+.th-value b{font-size:24px;font-weight:750;color:var(--ink);font-variant-numeric:tabular-nums}
+.th-value.is-open b{font-size:18px;font-weight:650;color:var(--live)}
+.th-hint{margin:2px 0 0;font-size:14px;color:#7c8a9d}
+.th-note{margin:0;padding:10px 28px;font-size:14px;color:var(--muted);border-bottom:1px solid var(--line-soft)}
 .empty-state{padding:16px 28px;border-bottom:1px solid var(--line-soft);background:#fbfcfe}
 .empty-state h3{font-size:18px;color:var(--ink);font-weight:650}
 .empty-state p{font-size:16px;color:var(--muted)}
@@ -301,6 +313,15 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
   .prize-table tfoot td:last-child{font-size:22px}
   .board-meta{padding:12px 16px}
   .empty-state{padding:14px 16px}
+  .thresholds{grid-template-columns:1fr}
+  .th-item{display:grid;grid-template-columns:1fr auto;align-items:baseline;column-gap:12px;padding:12px 16px 12px 12px}
+  .th-item+.th-item{box-shadow:inset 0 1px 0 var(--line-soft)}
+  .th-tier{font-size:15px}
+  .th-value{margin:0;text-align:right;grid-row:span 2}
+  .th-value b{font-size:20px}
+  .th-value.is-open b{font-size:16px}
+  .th-hint{font-size:13px}
+  .th-note{padding:10px 16px;font-size:13px}
   .scroll-hint{display:block;padding:10px 16px 0;font-size:15px;color:var(--muted)}
   .board-scroll{max-height:560px}
   .board-table{min-width:0}
@@ -414,6 +435,12 @@ footer .brand .ave-logo{width:28px;height:25px;margin-right:7px}
     <section id="leaderboard" class="panel" aria-labelledby="board-title">
       <div class="panel-head"><div><h2 id="board-title">交易量排名</h2><p id="board-sub">榜单公示前 50 名，奖励覆盖前 200 名；仅统计 AVE 上 Anubis Chain 官方 $OFT 的交易</p></div><button type="button" id="refresh-button" class="refresh-button" disabled><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 7v5h-5M4 17v-5h5"/><path d="M6.3 7a7 7 0 0 1 11.4-1L20 9M4 15l2.3 3A7 7 0 0 0 17.7 17"/></svg>刷新榜单</button></div>
       <div class="board-meta"><span id="data-status" class="data-status" role="status" aria-live="polite">连接中</span><span>最近刷新：<time id="updated-at">—</time></span></div>
+      <div class="thresholds" role="group" aria-label="各奖励档位当前门槛">
+        <div class="th-item t1"><p class="th-tier">前 10 名 · <span>每人 60 U</span></p><p class="th-value" id="th-10"><b>—</b> U</p><p class="th-hint" id="th-10-hint">第 10 名当前交易量</p></div>
+        <div class="th-item t2"><p class="th-tier">前 50 名 · <span>每人 35 U</span></p><p class="th-value" id="th-50"><b>—</b> U</p><p class="th-hint" id="th-50-hint">第 50 名当前交易量</p></div>
+        <div class="th-item t3"><p class="th-tier">前 200 名 · <span>每人 20 U</span></p><p class="th-value" id="th-200"><b>—</b> U</p><p class="th-hint" id="th-200-hint">第 200 名当前交易量</p></div>
+      </div>
+      <p class="th-note">累计交易量高于对应名次的当前交易量，即可进入该档。门槛随榜单实时变化，最终以活动结束时的排名为准。</p>
       <div id="empty-state" class="empty-state"><h3 id="empty-title">榜单加载中</h3><p id="empty-description">正在获取最新排名。</p></div>
       <p class="scroll-hint" id="scroll-hint">在榜单内上下滑动查看前 50 名</p>
       <div class="board-scroll" tabindex="0" role="region" aria-label="交易榜单表格，可滚动">
@@ -644,12 +671,38 @@ const TOTAL_PRIZE_RANKS = 200;
     return tr;
   }
 
+  const THRESHOLD_RANKS = [10, 50, 200];
+
+  function renderThresholds(snapshot, rowsByRank) {
+    for (const n of THRESHOLD_RANKS) {
+      const value = document.getElementById('th-' + n);
+      const hint = document.getElementById('th-' + n + '-hint');
+      const strong = document.createElement('b');
+      value.classList.remove('is-open');
+      if (n > snapshot.publicRanks) {
+        strong.textContent = '—';
+        value.replaceChildren(strong, ' U');
+        hint.textContent = '榜单未公示到第 ' + n + ' 名';
+      } else if (rowsByRank.has(n)) {
+        strong.textContent = volumeFormat.format(rowsByRank.get(n).volume);
+        value.replaceChildren(strong, ' U');
+        hint.textContent = '第 ' + n + ' 名当前交易量';
+      } else {
+        strong.textContent = '有交易即可进入';
+        value.classList.add('is-open');
+        value.replaceChildren(strong);
+        hint.textContent = '当前上榜不足 ' + n + ' 人';
+      }
+    }
+  }
+
   function render(snapshot) {
     const fragment = document.createDocumentFragment();
     const rowsByRank = new Map(snapshot.rows.map(row => [row.rank, row]));
     const shown = snapshot.publicRanks;
     for (let position = 1; position <= shown; position++) fragment.append(buildRow(position, rowsByRank.get(position)));
     if (shown < TOTAL_PRIZE_RANKS) fragment.append(buildRestRow(shown));
+    renderThresholds(snapshot, rowsByRank);
     boardSub.textContent = shown >= TOTAL_PRIZE_RANKS
       ? '公示全部 200 个获奖名次；仅统计 AVE 上 Anubis Chain 官方 $OFT 的交易'
       : '榜单公示前 ' + shown + ' 名，奖励覆盖前 200 名；仅统计 AVE 上 Anubis Chain 官方 $OFT 的交易';
